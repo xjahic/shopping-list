@@ -3,6 +3,7 @@ import Head from "next/head";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { api } from "~/utils/api";
 import { Recipes } from "~/components/recipe/Recipes";
+import { CreateRecipe } from "~/components/recipe/CreateRecipe";
 
 const Home: NextPage = () => {
   const { data: sessionData } = useSession();
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
               </div>
             </>
           )}
+          <CreateRecipe />
           <div className="mt-12 flex flex-col items-center gap-2">
             <div className="flex flex-col items-center justify-center gap-4">
               <p className="text-center text-sm text-white">
