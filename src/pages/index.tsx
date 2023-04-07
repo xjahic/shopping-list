@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               </div>
             </>
           )}
-          <CreateRecipe />
+          {sessionData && <CreateRecipe />}
           <div className="mt-12 flex flex-col items-center gap-2">
             <div className="flex flex-col items-center justify-center gap-4">
               <p className="text-center text-sm text-white">
